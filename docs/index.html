@@ -3,73 +3,75 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Imagination, Engineered — Interactive Study</title>
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      overflow: hidden;
-      color: #e8e2d7;
-      background-color: #0d0f0e;
-      background-image:
-        linear-gradient(#313831 1px, transparent 1px),
-        linear-gradient(90deg, #313831 1px, transparent 1px);
-      background-size: 36px 36px;
-      font-family: "Courier New", monospace;
+  <meta name="theme-color" content="#090d0c">
+  <title>The Aperture Ring - Abdullah Hussain</title>
+  <link rel="stylesheet" href="./viewer.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.171.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.171.0/examples/jsm/"
+      }
     }
-    model-viewer {
-      width: 100vw;
-      height: 100vh;
-      --poster-color: transparent;
-    }
-    header {
-      position: fixed;
-      z-index: 2;
-      top: 28px;
-      left: 32px;
-      pointer-events: none;
-    }
-    h1 {
-      margin: 0;
-      font: 800 clamp(32px, 6vw, 78px)/.9 Arial, sans-serif;
-      letter-spacing: -.06em;
-    }
-    h1 span { color: #d7ff45; display: block; }
-    p { color: #8e918b; font-size: 11px; letter-spacing: .12em; }
-    .hint {
-      position: fixed;
-      z-index: 2;
-      right: 28px;
-      bottom: 24px;
-      padding: 11px 14px;
-      border: 1px solid #596158;
-      border-radius: 6px;
-      color: #d7ff45;
-      background: #151816cc;
-      font-size: 10px;
-      letter-spacing: .12em;
-    }
-  </style>
+  </script>
 </head>
 <body>
-  <header>
-    <h1>IMAGINATION,<span>ENGINEERED.</span></h1>
-    <p>AN INTERACTIVE STUDY BY ABDULLAH HUSSAIN</p>
-  </header>
-  <model-viewer
-    src="./profile-sculpture.glb"
-    alt="Interactive abstract sculpture connecting film, AI, software, and spatial design"
-    camera-controls
-    auto-rotate
-    auto-rotate-delay="0"
-    rotation-per-second="18deg"
-    shadow-intensity="1"
-    exposure="1.3"
-    environment-image="neutral"
-    interaction-prompt="auto">
-  </model-viewer>
-  <div class="hint">DRAG TO ORBIT · SCROLL TO ZOOM</div>
+  <main class="shell">
+    <header class="topbar">
+      <a class="identity" href="https://github.com/abdullahanxie">
+        <span class="signal"></span>
+        <span>ABDULLAH HUSSAIN / OBJECT STUDY 01</span>
+      </a>
+      <div class="stats" id="stats">LOADING GEOMETRY</div>
+    </header>
+
+    <section class="stage">
+      <div class="intro">
+        <p class="eyebrow">A SMALL OBJECT WITH SEVERAL HISTORIES</p>
+        <h1>THE<br><span>APERTURE</span><br>RING.</h1>
+        <p class="lede">
+          Filmmaking taught my eye. Engineering gave that eye a way to build.
+          This ring holds both ideas in one object.
+        </p>
+      </div>
+
+      <div class="viewport" id="viewport" aria-label="Interactive 3D model of the Aperture Ring">
+        <div class="loading" id="loading">
+          <div class="loading-copy">
+            <span>ASSEMBLING OBJECT</span>
+            <strong id="loadingValue">0%</strong>
+          </div>
+          <div class="loading-track"><i id="loadingBar"></i></div>
+        </div>
+
+        <div class="toolbar" aria-label="Viewer controls">
+          <button class="active" id="rotateButton" type="button">ROTATE</button>
+          <button id="wireButton" type="button">WIREFRAME</button>
+          <button id="isolateButton" type="button">ISOLATE</button>
+          <button id="showButton" type="button">SHOW ALL</button>
+          <button id="resetButton" type="button">RESET VIEW</button>
+        </div>
+
+        <p class="gesture">DRAG TO ORBIT / SCROLL TO ZOOM / CLICK A PART</p>
+      </div>
+
+      <aside class="parts-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">OBJECT ANATOMY</p>
+            <h2 id="selectionName">Pick a part</h2>
+          </div>
+          <span class="part-count" id="partCount">00</span>
+        </div>
+        <p class="part-story" id="selectionStory">
+          Every visible piece has a job. Select one in the model or from the list
+          to see how the object connects film, vision, jewelry, and engineering.
+        </p>
+        <div class="parts-list" id="partsList"></div>
+      </aside>
+    </section>
+  </main>
+
+  <script type="module" src="./viewer.js"></script>
 </body>
 </html>

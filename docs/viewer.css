@@ -1,0 +1,396 @@
+:root {
+  color-scheme: dark;
+  --ink: #090d0c;
+  --panel: #101513;
+  --line: #303a34;
+  --soft-line: #202923;
+  --paper: #eeeae1;
+  --muted: #89938b;
+  --lime: #d7ff45;
+  --cyan: #43c9ff;
+  --coral: #ff6b54;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  background: var(--ink);
+}
+
+body {
+  color: var(--paper);
+  font-family: Arial, Helvetica, sans-serif;
+  background-image:
+    linear-gradient(var(--soft-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--soft-line) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+button,
+a {
+  color: inherit;
+  font: inherit;
+}
+
+.shell {
+  min-height: 100vh;
+  padding: 18px;
+}
+
+.topbar {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--line);
+  background: var(--ink);
+  padding: 0 14px;
+  font: 700 10px/1 "Courier New", monospace;
+  letter-spacing: 0.15em;
+}
+
+.identity {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  text-decoration: none;
+}
+
+.signal {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--lime);
+  box-shadow: 0 0 16px var(--lime);
+}
+
+.stats {
+  color: var(--lime);
+}
+
+.stage {
+  height: calc(100vh - 78px);
+  min-height: 610px;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.72fr) minmax(420px, 2fr) minmax(270px, 0.86fr);
+  border: 1px solid var(--line);
+  border-top: 0;
+  background: rgba(9, 13, 12, 0.84);
+}
+
+.intro,
+.parts-panel {
+  position: relative;
+  z-index: 2;
+  background: rgba(9, 13, 12, 0.92);
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 28px;
+  border-right: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin: 0 0 15px;
+  color: var(--muted);
+  font: 700 9px/1.5 "Courier New", monospace;
+  letter-spacing: 0.16em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(48px, 6vw, 100px);
+  line-height: 0.81;
+  letter-spacing: -0.09em;
+}
+
+h1 span {
+  color: var(--lime);
+}
+
+.lede {
+  max-width: 270px;
+  margin: 34px 0 0;
+  color: #aeb7af;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.viewport {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background: #070a09;
+}
+
+.viewport canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+
+.viewport canvas:active {
+  cursor: grabbing;
+}
+
+.toolbar {
+  position: absolute;
+  z-index: 3;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.toolbar button {
+  min-height: 30px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--muted);
+  font: 700 8px/1 "Courier New", monospace;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.toolbar button:hover,
+.toolbar button.active {
+  border-color: var(--lime);
+  color: var(--lime);
+}
+
+.gesture {
+  position: absolute;
+  z-index: 2;
+  right: 15px;
+  bottom: 10px;
+  margin: 0;
+  color: var(--muted);
+  font: 700 8px/1 "Courier New", monospace;
+  letter-spacing: 0.12em;
+  pointer-events: none;
+}
+
+.loading {
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  background: #070a09;
+  transition: opacity 220ms ease, visibility 220ms ease;
+}
+
+.loading.done {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loading-copy {
+  width: min(330px, 70vw);
+  display: flex;
+  justify-content: space-between;
+  color: var(--paper);
+  font: 700 9px/1 "Courier New", monospace;
+  letter-spacing: 0.14em;
+}
+
+.loading-copy strong {
+  color: var(--lime);
+}
+
+.loading-track {
+  height: 2px;
+  margin-top: 12px;
+  overflow: hidden;
+  background: var(--line);
+}
+
+.loading-track i {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: var(--lime);
+}
+
+.parts-panel {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.panel-heading {
+  min-height: 116px;
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 22px 20px 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.panel-heading .eyebrow {
+  margin-bottom: 7px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.part-count {
+  color: var(--lime);
+  font: 700 20px/1 "Courier New", monospace;
+}
+
+.part-story {
+  min-height: 126px;
+  margin: 0;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--line);
+  color: #aeb7af;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.parts-list {
+  flex: 1;
+  overflow: auto;
+  scrollbar-color: var(--line) transparent;
+}
+
+.part-button {
+  width: 100%;
+  min-height: 43px;
+  display: grid;
+  grid-template-columns: 24px 1fr auto;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  border-bottom: 1px solid var(--soft-line);
+  background: transparent;
+  padding: 0 13px;
+  color: #aeb7af;
+  text-align: left;
+  cursor: pointer;
+}
+
+.part-button:hover,
+.part-button.active {
+  color: var(--paper);
+  background: var(--panel);
+}
+
+.part-button.active {
+  box-shadow: inset 2px 0 var(--lime);
+}
+
+.part-index,
+.part-meta {
+  color: var(--muted);
+  font: 700 8px/1 "Courier New", monospace;
+  letter-spacing: 0.08em;
+}
+
+.part-button.active .part-index,
+.part-button.active .part-meta {
+  color: var(--lime);
+}
+
+.part-name {
+  overflow: hidden;
+  font-size: 10px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 1040px) {
+  .stage {
+    grid-template-columns: minmax(190px, 0.65fr) 2fr minmax(230px, 0.75fr);
+  }
+
+  .intro {
+    padding: 20px;
+  }
+
+  .lede {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 780px) {
+  .shell {
+    padding: 0;
+  }
+
+  .topbar {
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .stats {
+    display: none;
+  }
+
+  .stage {
+    height: auto;
+    min-height: calc(100vh - 42px);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 62vh minmax(260px, auto);
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .intro {
+    display: block;
+    padding: 22px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  h1 {
+    font-size: 58px;
+  }
+
+  .lede {
+    max-width: 520px;
+    margin-top: 18px;
+  }
+
+  .parts-panel {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .parts-list {
+    max-height: 300px;
+  }
+
+  .part-story {
+    min-height: 0;
+  }
+
+  .gesture {
+    left: 14px;
+    right: auto;
+  }
+}

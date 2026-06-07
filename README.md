@@ -19,12 +19,18 @@ problem are really the same problem.
 
 <p align="center">
   <a href="https://abdullahanxie.github.io/abdullahanxie/">
-    <img src="./assets/profile-sculpture-orbit.gif" alt="A rotating abstract 3D sculpture connecting filmmaking, creative AI, vision, software, and spatial design" width="100%">
+    <img src="./assets/aperture-ring-orbit.gif" alt="The Aperture Ring, a rotating jewelry object built from a camera iris, machine vision lens, and engineered setting" width="100%">
   </a>
 </p>
 
 <p align="center">
-  <sub>Click the sculpture to open it in 3D. Drag to orbit, scroll to zoom.</sub>
+  The Aperture Ring brings together the things I keep returning to: filmmaking,
+  jewelry, machine vision, and the engineering needed to turn an image into an
+  object.
+</p>
+
+<p align="center">
+  <sub>Click the ring to open it in 3D, select its parts, and see how it was designed.</sub>
 </p>
 
 ## A little more about the work
