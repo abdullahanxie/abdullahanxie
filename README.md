@@ -27,12 +27,6 @@ problem are really the same problem.
   <sub>Click the sculpture to open it in 3D. Drag to orbit, scroll to zoom.</sub>
 </p>
 
-<p align="center">
-  <a href="https://abdullahanxie.github.io/abdullahanxie/">
-    <img src="./assets/profile-sculpture-still.png" alt="Cinematic still of Abdullah's interactive creative-engineering sculpture" width="100%">
-  </a>
-</p>
-
 ## A little more about the work
 
 <details>
