@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/engineering-profile.svg" alt="Abdullah Hussain — Creative AI Engineer, Filmmaker, and 3D Designer" width="100%">
+  <img src="./assets/textile-profile.svg" alt="Abdullah Hussain — Creative AI Engineer, Filmmaker, and 3D Designer" width="100%">
 </p>
 
 ## Creative AI engineer, filmmaker, and visual systems builder
@@ -13,7 +13,7 @@ my eye for composition, rhythm, light, emotion, and detail. Engineering gave tha
 eye a larger set of instruments.
 
 <p align="center">
-  <img src="./assets/capability-constellation.svg" alt="Capability constellation spanning filmmaking, creative AI, computer vision, 3D, software, machine learning, product prototypes, and visual design" width="100%">
+  <img src="./assets/capability-textile.svg" alt="Capability textile spanning filmmaking, creative AI, computer vision, 3D, software, machine learning, and product prototypes" width="100%">
 </p>
 
 ## What I bring
@@ -51,7 +51,7 @@ eye a larger set of instruments.
 - Moving comfortably between research questions and user-facing experiences
 
 <p align="center">
-  <img src="./assets/cinema-code.svg" alt="Cinema and code are one creative engineering practice" width="100%">
+  <img src="./assets/cinema-code-textile.svg" alt="Cinema and code are one creative engineering practice" width="100%">
 </p>
 
 ## Public work & recognition

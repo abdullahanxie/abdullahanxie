@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="390" viewBox="0 0 1200 390" role="img" aria-labelledby="title desc">
+  <title id="title">The camera trained the eye, engineering expanded its instruments</title>
+  <desc id="desc">A restrained embroidered linen artwork joining cinematic and engineering craft.</desc>
+  <defs>
+    <pattern id="linen" width="17" height="17" patternUnits="userSpaceOnUse">
+      <rect width="17" height="17" fill="#e8dfcf"/>
+      <path d="M0 3H17M0 9H17M0 15H17M3 0V17M10 0V17M15 0V17" stroke="#c4b6a0" stroke-width=".5" opacity=".7"/>
+    </pattern>
+    <pattern id="cross" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M3 3 13 13M13 3 3 13" stroke="#8e2826" stroke-width="2.2" stroke-linecap="round"/>
+    </pattern>
+    <pattern id="diamond" width="44" height="28" patternUnits="userSpaceOnUse">
+      <path d="M22 2 42 14 22 26 2 14Z M22 8 32 14 22 20 12 14Z" fill="none" stroke="#8e2826" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="390" fill="url(#linen)"/>
+  <path d="M18 18H1182V372H18Z" fill="none" stroke="#681f1f" stroke-width="3" stroke-dasharray="3 7"/>
+  <rect x="34" y="34" width="1132" height="28" fill="url(#diamond)"/>
+  <rect x="34" y="328" width="1132" height="28" fill="url(#diamond)"/>
+
+  <rect x="70" y="92" width="310" height="206" fill="#ded2bf" stroke="#681f1f" stroke-width="2"/>
+  <rect x="820" y="92" width="310" height="206" fill="#ded2bf" stroke="#681f1f" stroke-width="2"/>
+  <rect x="421" y="92" width="358" height="206" fill="#f0e8da" stroke="#8e2826" stroke-width="2" stroke-dasharray="5 5"/>
+
+  <!-- Film reel in thread -->
+  <g transform="translate(225 171)" fill="none" stroke="#8e2826" stroke-width="3">
+    <circle r="55"/><circle r="12"/>
+    <path d="M0-12V-51M10-6 44-25M10 6l34 20M0 12v39M-10 6-44 26M-10-6-44-25"/>
+  </g>
+  <text x="225" y="254" text-anchor="middle" fill="#4d1919" font-family="Georgia, serif" font-size="23" font-weight="700">CINEMATIC CRAFT</text>
+  <text x="225" y="278" text-anchor="middle" fill="#8e2826" font-family="'Courier New', monospace" font-size="10" font-weight="700">STORY / EDIT / COLOR / MOTION</text>
+
+  <!-- Code as embroidery -->
+  <g transform="translate(975 171)" fill="none" stroke="#8e2826" stroke-width="3" stroke-linecap="round">
+    <rect x="-72" y="-57" width="144" height="114"/>
+    <path d="m-43-18 20 18-20 18M-8 18h29M29-18h28M29 0h17M29 18h25"/>
+  </g>
+  <text x="975" y="254" text-anchor="middle" fill="#4d1919" font-family="Georgia, serif" font-size="23" font-weight="700">ENGINEERING CRAFT</text>
+  <text x="975" y="278" text-anchor="middle" fill="#8e2826" font-family="'Courier New', monospace" font-size="10" font-weight="700">MODEL / CODE / TEST / SHIP</text>
+
+  <!-- Center modern-art knot -->
+  <g transform="translate(600 174)">
+    <path d="M0-71 28-39 71-42 42 0 71 42 28 39 0 71-28 39-71 42-42 0-71-42-28-39Z" fill="none" stroke="#8e2826" stroke-width="4"/>
+    <path d="M0-49 18-27 49-29 29 0 49 29 18 27 0 49-18 27-49 29-29 0-49-29-18-27Z" fill="#ded2bf" stroke="#681f1f" stroke-width="3"/>
+    <circle r="27" fill="url(#cross)" stroke="#8e2826" stroke-width="2"/>
+  </g>
+  <text x="600" y="264" text-anchor="middle" fill="#4d1919" font-family="Georgia, serif" font-size="20" font-weight="700">ONE PRACTICE</text>
+  <text x="600" y="286" text-anchor="middle" fill="#8e2826" font-family="'Courier New', monospace" font-size="10" font-weight="700">IMAGE × LOGIC</text>
+
+  <!-- Quiet modern wire -->
+  <path d="M380 194h65v-45h84M671 149h84v45h65" fill="none" stroke="#3d5555" stroke-width="2" stroke-dasharray="7 5"/>
+  <circle cx="445" cy="194" r="5" fill="#e8dfcf" stroke="#3d5555" stroke-width="2"/>
+  <circle cx="755" cy="194" r="5" fill="#e8dfcf" stroke="#3d5555" stroke-width="2"/>
+</svg>
