@@ -18,13 +18,19 @@ problem are really the same problem.
 ## How it connects
 
 <p align="center">
-  <a href="#a-little-more-about-the-work">
-    <img src="./assets/practice-map.svg" alt="One practice across filmmaking, creative AI, computer vision, spatial design, software, and product craft" width="100%">
+  <a href="https://abdullahanxie.github.io/abdullahanxie/">
+    <img src="./assets/profile-sculpture-orbit.gif" alt="A rotating abstract 3D sculpture connecting filmmaking, creative AI, vision, software, and spatial design" width="100%">
   </a>
 </p>
 
 <p align="center">
-  <img src="./assets/camera-code.svg" alt="The camera trained my eye. Code expanded what it can build." width="100%">
+  <sub>Click the sculpture to open it in 3D. Drag to orbit, scroll to zoom.</sub>
+</p>
+
+<p align="center">
+  <a href="https://abdullahanxie.github.io/abdullahanxie/">
+    <img src="./assets/profile-sculpture-still.png" alt="Cinematic still of Abdullah's interactive creative-engineering sculpture" width="100%">
+  </a>
 </p>
 
 ## A little more about the work

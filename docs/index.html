@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Imagination, Engineered — Interactive Study</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow: hidden;
+      color: #e8e2d7;
+      background-color: #0d0f0e;
+      background-image:
+        linear-gradient(#313831 1px, transparent 1px),
+        linear-gradient(90deg, #313831 1px, transparent 1px);
+      background-size: 36px 36px;
+      font-family: "Courier New", monospace;
+    }
+    model-viewer {
+      width: 100vw;
+      height: 100vh;
+      --poster-color: transparent;
+    }
+    header {
+      position: fixed;
+      z-index: 2;
+      top: 28px;
+      left: 32px;
+      pointer-events: none;
+    }
+    h1 {
+      margin: 0;
+      font: 800 clamp(32px, 6vw, 78px)/.9 Arial, sans-serif;
+      letter-spacing: -.06em;
+    }
+    h1 span { color: #d7ff45; display: block; }
+    p { color: #8e918b; font-size: 11px; letter-spacing: .12em; }
+    .hint {
+      position: fixed;
+      z-index: 2;
+      right: 28px;
+      bottom: 24px;
+      padding: 11px 14px;
+      border: 1px solid #596158;
+      border-radius: 6px;
+      color: #d7ff45;
+      background: #151816cc;
+      font-size: 10px;
+      letter-spacing: .12em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>IMAGINATION,<span>ENGINEERED.</span></h1>
+    <p>AN INTERACTIVE STUDY BY ABDULLAH HUSSAIN</p>
+  </header>
+  <model-viewer
+    src="./profile-sculpture.glb"
+    alt="Interactive abstract sculpture connecting film, AI, software, and spatial design"
+    camera-controls
+    auto-rotate
+    auto-rotate-delay="0"
+    rotation-per-second="18deg"
+    shadow-intensity="1"
+    exposure="1.3"
+    environment-image="neutral"
+    interaction-prompt="auto">
+  </model-viewer>
+  <div class="hint">DRAG TO ORBIT · SCROLL TO ZOOM</div>
+</body>
+</html>
