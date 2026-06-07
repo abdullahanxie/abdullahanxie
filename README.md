@@ -1,20 +1,38 @@
 <p align="center">
-  <img src="./assets/engineering-profile.svg" alt="Abdullah Hussain — Creative AI Engineer, Filmmaker, and 3D Designer" width="100%">
+  <a href="#practice-map">
+    <img src="./assets/imagination-engineered.svg" alt="Imagination, Engineered — Abdullah Hussain" width="100%">
+  </a>
 </p>
 
 ## Creative AI engineer, filmmaker, and visual systems builder
 
-I work across engineering and image-making: building intelligent tools, training
-computer-vision systems, shaping three-dimensional experiences, and creating
-cinematic work through editing, color, motion, and visual storytelling.
+I engineer imagination into **moving images**, **intelligent systems**, and
+**spatial form**.
 
-My filmmaking background is not separate from my engineering practice. It trained
-my eye for composition, rhythm, light, emotion, and detail. Engineering gave that
-eye a larger set of instruments.
+My filmmaking background trained my eye for composition, rhythm, light, emotion,
+and detail. Engineering gave that eye a larger set of instruments: models, code,
+geometry, data, and interactive systems.
 
-## What I bring
+## Practice map
 
-### Creative AI & machine learning
+<p align="center">
+  <a href="#capability-notes">
+    <img src="./assets/practice-map.svg" alt="One practice across filmmaking, creative AI, computer vision, spatial design, software, and product craft" width="100%">
+  </a>
+</p>
+
+| Moving image | Intelligent systems | Spatial form | Creative systems |
+|---|---|---|---|
+| Filmmaking, editing, color, motion | Creative AI, computer vision, ML | 3D, materials, lighting, design | Software, tools, prototypes, products |
+
+<p align="center">
+  <img src="./assets/camera-code.svg" alt="The camera trained my eye. Code expanded what it can build." width="100%">
+</p>
+
+## Capability notes
+
+<details>
+<summary><strong>Creative AI & machine learning</strong></summary>
 
 - Generative and multimodal AI experimentation
 - Computer vision, image understanding, and visual classification
@@ -22,7 +40,10 @@ eye a larger set of instruments.
 - Dataset design, experiment tracking, metrics, and iterative model improvement
 - Responsible use of AI as an amplifier for human taste and judgment
 
-### 3D, spatial & engineering design
+</details>
+
+<details>
+<summary><strong>3D, spatial & engineering design</strong></summary>
 
 - 3D design, procedural form, and spatial problem-solving
 - Industrial and engineering design thinking
@@ -30,7 +51,10 @@ eye a larger set of instruments.
 - Visual tools that make complex spatial ideas easier to understand and use
 - A strong interest in the relationship between code, geometry, and fabrication
 
-### Filmmaking & visual storytelling
+</details>
+
+<details>
+<summary><strong>Filmmaking & visual storytelling</strong></summary>
 
 - More than three years of filmmaking and visual-media practice
 - Video production, editing, color grading, animation, and motion
@@ -38,13 +62,18 @@ eye a larger set of instruments.
 - An engineering-led approach to color, image quality, and repeatable results
 - Experience translating concepts into emotionally clear visual language
 
-### Software & product craft
+</details>
+
+<details>
+<summary><strong>Software & product craft</strong></summary>
 
 - Python-led applied AI development
 - Interactive web experiences and full-stack prototypes
 - Creative coding, automation, and internal tools
 - Fast experimentation without losing sight of polish or usability
 - Moving comfortably between research questions and user-facing experiences
+
+</details>
 
 ## Public work & recognition
 

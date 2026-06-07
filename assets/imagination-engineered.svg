@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Imagination, Engineered — Abdullah Hussain</title>
+  <desc id="desc">Abdullah Hussain engineers imagination into moving images, intelligent systems, and spatial form.</desc>
+  <defs>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#313831" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d7ff45"/>
+      <stop offset="1" stop-color="#59c3ff"/>
+    </linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="10"/></filter>
+  </defs>
+
+  <rect width="1200" height="560" rx="24" fill="#0d0f0e"/>
+  <rect width="1200" height="560" rx="24" fill="url(#grid)" opacity=".72"/>
+  <circle cx="1010" cy="70" r="220" fill="#d7ff45" opacity=".06" filter="url(#soft)"/>
+  <circle cx="150" cy="540" r="250" fill="#59c3ff" opacity=".07" filter="url(#soft)"/>
+
+  <g font-family="'Courier New', monospace" font-size="13" fill="#8e918b" letter-spacing="2">
+    <text x="48" y="48">ABDULLAH HUSSAIN / CREATIVE AI ENGINEER + FILMMAKER</text>
+    <text x="1152" y="48" text-anchor="end" fill="#d7ff45">● SIGNAL ACTIVE</text>
+  </g>
+
+  <g transform="translate(48 120)">
+    <text font-family="Arial, sans-serif" font-weight="800" font-size="88" letter-spacing="-6" fill="#e8e2d7">
+      <tspan x="0" y="0">IMAGINATION,</tspan>
+      <tspan x="0" y="88" fill="#d7ff45">ENGINEERED.</tspan>
+    </text>
+    <text x="4" y="145" font-family="'Courier New', monospace" font-size="18" fill="#bdc0b9">
+      Into moving images, intelligent systems, and spatial form.
+    </text>
+    <path d="M4 169H765" stroke="#596158" stroke-width="1"/>
+    <text x="4" y="197" font-family="'Courier New', monospace" font-size="13" fill="#8e918b" letter-spacing="1">
+      VISUAL INSTINCT  ×  TECHNICAL DEPTH  ×  CULTURAL IMAGINATION
+    </text>
+  </g>
+
+  <!-- Parallel capability signals, not a process diagram -->
+  <g transform="translate(48 412)" font-family="'Courier New', monospace">
+    <g>
+      <rect width="252" height="92" rx="8" fill="#151816" stroke="#596158"/>
+      <path d="M18 20h34v25H18zM18 27h34M29 20v25M41 20v25" fill="none" stroke="#ff6b4a" stroke-width="1.5"/>
+      <text x="68" y="31" font-size="10" fill="#8e918b" letter-spacing="1">CRAFT / 01</text>
+      <text x="68" y="53" font-size="17" fill="#e8e2d7">MOVING IMAGE</text>
+      <text x="18" y="76" font-size="10" fill="#8e918b">FILM • EDIT • COLOR • MOTION</text>
+    </g>
+    <g transform="translate(269)">
+      <rect width="252" height="92" rx="8" fill="#151816" stroke="#596158"/>
+      <g fill="none" stroke="#59c3ff" stroke-width="1.5">
+        <circle cx="35" cy="32" r="8"/><circle cx="18" cy="49" r="5"/><circle cx="52" cy="49" r="5"/>
+        <path d="m29 38-8 8m20-8 8 8"/>
+      </g>
+      <text x="68" y="31" font-size="10" fill="#8e918b" letter-spacing="1">CRAFT / 02</text>
+      <text x="68" y="53" font-size="17" fill="#e8e2d7">INTELLIGENCE</text>
+      <text x="18" y="76" font-size="10" fill="#8e918b">AI • VISION • MODELS • DATA</text>
+    </g>
+    <g transform="translate(538)">
+      <rect width="252" height="92" rx="8" fill="#151816" stroke="#596158"/>
+      <path d="M35 18 56 30v25L35 67 14 55V30Zm0 0v25m21-13L35 43 14 30m21 13v24" fill="none" stroke="#d7ff45" stroke-width="1.5"/>
+      <text x="78" y="31" font-size="10" fill="#8e918b" letter-spacing="1">CRAFT / 03</text>
+      <text x="78" y="53" font-size="17" fill="#e8e2d7">SPATIAL FORM</text>
+      <text x="18" y="76" font-size="10" fill="#8e918b">3D • MATERIAL • LIGHT • SPACE</text>
+    </g>
+    <g transform="translate(807)">
+      <rect width="297" height="92" rx="8" fill="url(#signal)"/>
+      <path d="m24 29 12 10-12 10m20 0h18" fill="none" stroke="#102015" stroke-width="2.5" stroke-linecap="round"/>
+      <text x="78" y="31" font-size="10" fill="#183026" letter-spacing="1">PRACTICE / 04</text>
+      <text x="78" y="53" font-size="17" font-weight="700" fill="#0d0f0e">CREATIVE SYSTEMS</text>
+      <text x="18" y="76" font-size="10" fill="#183026">CODE • TOOLS • PRODUCTS • EXPERIENCE</text>
+    </g>
+  </g>
+
+  <rect x="1" y="1" width="1198" height="558" rx="23" fill="none" stroke="#454d44" stroke-width="2"/>
+</svg>
