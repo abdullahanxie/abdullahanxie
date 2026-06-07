@@ -32,3 +32,5 @@ concept becomes something people can see, understand, and use. My work balances:
 <p align="center">
   <strong>Imagine clearly. Build beautifully.</strong>
 </p>
+
+<!-- Public profile: capabilities only. -->
