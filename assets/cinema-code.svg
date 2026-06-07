@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">Cinema and code are one practice</title>
+  <desc id="desc">A flat-color ornamental panel connecting cinematic craft with engineering craft.</desc>
+  <defs>
+    <pattern id="stars" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M30 5 38 22 55 30 38 38 30 55 22 38 5 30 22 22Z" fill="none" stroke="#1a525a" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="430" fill="#07111f"/>
+  <rect x="15" y="15" width="1170" height="400" fill="none" stroke="#c89b3c" stroke-width="3"/>
+  <rect x="26" y="26" width="1148" height="378" fill="url(#stars)" opacity=".25"/>
+  <path d="M60 376V150C60 74 124 42 202 42s142 32 142 108v226M856 376V150c0-76 64-108 142-108s142 32 142 108v226" fill="#0c2332" stroke="#c89b3c" stroke-width="3"/>
+
+  <g transform="translate(202 210)">
+    <circle r="74" fill="#153e70" stroke="#e7b44b" stroke-width="3"/>
+    <circle r="52" fill="#07111f" stroke="#dc6148" stroke-width="2"/>
+    <path d="M0 0 0-45C22-45 38-34 43-17ZM0 0 43-17C50 7 43 25 29 35ZM0 0 29 35C10 49-11 49-29 35ZM0 0-29 35C-45 21-50 1-43-17ZM0 0-43-17C-36-36-20-45 0-45Z" fill="#1b756d" stroke="#f0dfb5" stroke-width="1.5"/>
+    <circle r="12" fill="#e7b44b"/>
+    <text y="107" text-anchor="middle" fill="#f0dfb5" font-family="Georgia, serif" font-size="20" letter-spacing="3">CINEMATIC CRAFT</text>
+    <text y="132" text-anchor="middle" fill="#55c6b9" font-family="'Courier New', monospace" font-size="11">STORY • EDIT • COLOR • MOTION</text>
+  </g>
+
+  <g transform="translate(998 210)">
+    <rect x="-73" y="-60" width="146" height="120" rx="9" fill="#07111f" stroke="#55c6b9" stroke-width="3"/>
+    <circle cx="-52" cy="-40" r="4" fill="#dc6148"/><circle cx="-37" cy="-40" r="4" fill="#e7b44b"/><circle cx="-22" cy="-40" r="4" fill="#1b756d"/>
+    <path d="m-48-10 20 15-20 15M-13 20h29M17-10h36M17 5h22M17 20h31" fill="none" stroke="#f0dfb5" stroke-width="3"/>
+    <text y="107" text-anchor="middle" fill="#f0dfb5" font-family="Georgia, serif" font-size="20" letter-spacing="3">ENGINEERING CRAFT</text>
+    <text y="132" text-anchor="middle" fill="#55c6b9" font-family="'Courier New', monospace" font-size="11">MODEL • CODE • TEST • SHIP</text>
+  </g>
+
+  <g transform="translate(600 210)">
+    <path d="M0-143 37-89 101-101 89-37 143 0 89 37 101 101 37 89 0 143-37 89-101 101-89 37-143 0-89-37-101-101-37-89Z" fill="#153e70" stroke="#e7b44b" stroke-width="4"/>
+    <path d="M0-102 27-64 72-72 64-27 102 0 64 27 72 72 27 64 0 102-27 64-72 72-64 27-102 0-64-27-72-72-27-64Z" fill="#07111f" stroke="#dc6148" stroke-width="3"/>
+    <circle r="61" fill="#1b756d" stroke="#f0dfb5" stroke-width="2"/>
+    <text y="-13" text-anchor="middle" fill="#f0dfb5" font-family="Georgia, serif" font-size="22" font-weight="700">ONE</text>
+    <text y="17" text-anchor="middle" fill="#f0dfb5" font-family="Georgia, serif" font-size="22" font-weight="700">PRACTICE</text>
+    <text y="41" text-anchor="middle" fill="#07111f" font-family="'Courier New', monospace" font-size="10" font-weight="700">IMAGE × LOGIC</text>
+  </g>
+
+  <path d="M345 210h105M750 210h105" stroke="#55c6b9" stroke-width="3"/>
+  <g fill="#07111f" stroke="#e7b44b" stroke-width="2">
+    <circle cx="375" cy="210" r="8"/><circle cx="420" cy="210" r="8"/>
+    <circle cx="780" cy="210" r="8"/><circle cx="825" cy="210" r="8"/>
+  </g>
+  <text x="600" y="392" text-anchor="middle" fill="#e7b44b" font-family="Georgia, serif" font-size="18" letter-spacing="2">THE CAMERA TRAINED THE EYE. ENGINEERING GAVE IT NEW INSTRUMENTS.</text>
+</svg>
