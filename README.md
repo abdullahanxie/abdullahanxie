@@ -1,103 +1,86 @@
 <p align="center">
-  <a href="#practice-map">
+  <a href="#how-it-connects">
     <img src="./assets/imagination-engineered.svg" alt="Imagination, Engineered — Abdullah Hussain" width="100%">
   </a>
 </p>
 
-## Creative AI engineer, filmmaker, and visual systems builder
+## Hi, I'm Abdullah.
 
-I engineer imagination into **moving images**, **intelligent systems**, and
-**spatial form**.
+I started with filmmaking. Editing and color grading taught me to notice rhythm,
+light, composition, and all the small choices that make an image feel right.
+Later I moved deeper into engineering and AI, but I never left that way of
+looking at things behind.
 
-My filmmaking background trained my eye for composition, rhythm, light, emotion,
-and detail. Engineering gave that eye a larger set of instruments: models, code,
-geometry, data, and interactive systems.
+These days I write code, train vision models, work with 3D, and build tools for
+creative people. I like projects where the technical problem and the visual
+problem are really the same problem.
 
-## Practice map
+## How it connects
 
 <p align="center">
-  <a href="#capability-notes">
+  <a href="#a-little-more-about-the-work">
     <img src="./assets/practice-map.svg" alt="One practice across filmmaking, creative AI, computer vision, spatial design, software, and product craft" width="100%">
   </a>
 </p>
-
-| Moving image | Intelligent systems | Spatial form | Creative systems |
-|---|---|---|---|
-| Filmmaking, editing, color, motion | Creative AI, computer vision, ML | 3D, materials, lighting, design | Software, tools, prototypes, products |
 
 <p align="center">
   <img src="./assets/camera-code.svg" alt="The camera trained my eye. Code expanded what it can build." width="100%">
 </p>
 
-## Capability notes
+## A little more about the work
 
 <details>
-<summary><strong>Creative AI & machine learning</strong></summary>
+<summary><strong>AI and computer vision</strong></summary>
 
-- Generative and multimodal AI experimentation
-- Computer vision, image understanding, and visual classification
-- Transformer-based model training and evaluation
-- Dataset design, experiment tracking, metrics, and iterative model improvement
-- Responsible use of AI as an amplifier for human taste and judgment
+I enjoy working close to the image itself. I have trained transformer-based
+vision models, worked on visual classification, built datasets, tracked
+experiments, and spent a lot of time understanding why a model gets something
+wrong. I also explore generative and multimodal AI, especially where it can give
+artists and designers more control instead of making their choices for them.
 
 </details>
 
 <details>
-<summary><strong>3D, spatial & engineering design</strong></summary>
+<summary><strong>3D and design</strong></summary>
 
-- 3D design, procedural form, and spatial problem-solving
-- Industrial and engineering design thinking
-- Physically based materials, lighting, and rendering
-- Visual tools that make complex spatial ideas easier to understand and use
-- A strong interest in the relationship between code, geometry, and fabrication
+I am interested in form, materials, light, and how an idea changes once it
+becomes spatial. My work moves between 3D design, rendering, engineering design,
+and the tools needed to make complex geometry understandable and useful.
 
 </details>
 
 <details>
-<summary><strong>Filmmaking & visual storytelling</strong></summary>
+<summary><strong>Film and visual work</strong></summary>
 
-- More than three years of filmmaking and visual-media practice
-- Video production, editing, color grading, animation, and motion
-- Composition, sequencing, visual rhythm, art direction, and graphic design
-- An engineering-led approach to color, image quality, and repeatable results
-- Experience translating concepts into emotionally clear visual language
+Filmmaking is still a big part of how I think. I have more than three years of
+experience across video production, editing, color grading, animation, and
+graphic design. Even when I am building software, I am usually thinking about
+the sequence, the feeling, and what the person on the other side will see.
 
 </details>
 
 <details>
-<summary><strong>Software & product craft</strong></summary>
+<summary><strong>Software and experiments</strong></summary>
 
-- Python-led applied AI development
-- Interactive web experiences and full-stack prototypes
-- Creative coding, automation, and internal tools
-- Fast experimentation without losing sight of polish or usability
-- Moving comfortably between research questions and user-facing experiences
+Python is usually where I begin, but I also build web interfaces, prototypes,
+automation, and small tools whenever an idea needs a shape. I prefer making a
+working version early, learning from it, and improving the parts that actually
+matter.
 
 </details>
 
-## Public work & recognition
+## Something people noticed
 
-- Built public experiments across creative image transformation, computer vision,
-  model training, visual interfaces, and automation.
-- My AI artwork reimagining Bollywood figures through the visual world of
-  *Barbie* received international entertainment-media coverage from
-  [The Times of India](https://timesofindia.indiatimes.com/life-style/spotlight/web-stories/ai-imagines-bollywood-celebs-in-the-barbie-world/photostory/101855715.cms),
-  [IndiaTimes](https://www.indiatimes.com/ampstories/entertainment/virat-anushka-to-deepika-ranveer-ai-reimagines-popular-bollywood-celebrity-couples-in-barbie-world-609792.html),
-  [MensXP](https://www.mensxp.com/ampstories/buzz-on-web/latest/139474-ai-imagines-bollywood-actors-in-the-barbie-film-latest-trending-alia-priyanka-margot-robbie.html),
-  and [Onmanorama](https://www.onmanorama.com/entertainment/entertainment-news/2023/07/20/barbie-movie-bollywood-actors-ai-reimagination-priyanka-chopra-nick-jonas.html).
-- I approach color grading as a system to explore: beginning with the signal,
-  questioning assumptions, and shaping the image with intent rather than presets.
-- My broader practice connects storytelling, visual culture, emerging AI, and
-  engineering design.
+In 2023 I used AI to reimagine Bollywood figures inside the visual world of
+*Barbie*. The images travelled much further than I expected and were featured by
+[The Times of India](https://timesofindia.indiatimes.com/life-style/spotlight/web-stories/ai-imagines-bollywood-celebs-in-the-barbie-world/photostory/101855715.cms),
+[IndiaTimes](https://www.indiatimes.com/ampstories/entertainment/virat-anushka-to-deepika-ranveer-ai-reimagines-popular-bollywood-celebrity-couples-in-barbie-world-609792.html),
+[MensXP](https://www.mensxp.com/ampstories/buzz-on-web/latest/139474-ai-imagines-bollywood-actors-in-the-barbie-film-latest-trending-alia-priyanka-margot-robbie.html),
+and [Onmanorama](https://www.onmanorama.com/entertainment/entertainment-news/2023/07/20/barbie-movie-bollywood-actors-ai-reimagination-priyanka-chopra-nick-jonas.html).
+That project reminded me that technical experiments can still carry culture,
+humor, and a point of view.
 
-## Working vocabulary
-
-`Creative AI` · `Computer Vision` · `Machine Learning` · `Python` · `Transformers` ·
-`3D Design` · `Industrial Design` · `Engineering Design` · `Creative Coding` ·
-`Filmmaking` · `Video Editing` · `Color Grading` · `Animation` · `Visual Production`
-
-## Elsewhere
-
-[LinkedIn](https://www.linkedin.com/in/abdullah-hanxie-338519252/) ·
-[Instagram](https://www.instagram.com/abdullahanxie/) ·
-[GitHub repositories](https://github.com/abdullahanxie?tab=repositories)
+You can find me on
+[LinkedIn](https://www.linkedin.com/in/abdullah-hanxie-338519252/),
+[Instagram](https://www.instagram.com/abdullahanxie/), or around my
+[GitHub repositories](https://github.com/abdullahanxie?tab=repositories).
