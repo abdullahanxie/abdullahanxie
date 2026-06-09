@@ -19,8 +19,12 @@ problem are really the same problem.
 
 <p align="center">
   <a href="https://abdullahanxie.github.io/abdullahanxie/">
-    <img src="./docs/source-input.webp" alt="Input image of a silver diamond cluster ring used for the 3D GLB study" width="72%">
+    <img src="./docs/jewelry-ring-orbit.gif" alt="Rotating 3D preview of the silver diamond ring GLB" width="100%">
   </a>
+</p>
+
+<p align="center">
+  <img src="./docs/source-input.webp" alt="Input image of a silver diamond cluster ring used for the 3D GLB study" width="42%">
 </p>
 
 <p align="center">
@@ -29,7 +33,7 @@ problem are really the same problem.
 </p>
 
 <p align="center">
-  <sub>Open the 3D viewer to inspect the silver and diamond material pass.</sub>
+  <sub>Click the 3D preview to inspect the silver and diamond material pass.</sub>
 </p>
 
 ## A little more about the work
