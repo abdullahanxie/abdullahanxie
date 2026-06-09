@@ -150,6 +150,21 @@ h1 span {
   letter-spacing: 0;
 }
 
+.viewer-source {
+  position: absolute;
+  z-index: 3;
+  right: 14px;
+  bottom: 14px;
+  width: clamp(90px, 15vw, 140px);
+  margin: 0;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+}
+
+.viewer-source figcaption {
+  font-size: 7px;
+}
+
 .viewport {
   position: relative;
   min-width: 0;
@@ -396,6 +411,13 @@ h2 {
   .source-card {
     width: min(180px, 100%);
     margin-top: 16px;
+  }
+
+  .viewer-source {
+    right: 10px;
+    bottom: 10px;
+    width: 92px;
+    margin: 0;
   }
 
   .parts-panel {

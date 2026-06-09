@@ -18,22 +18,18 @@ problem are really the same problem.
 ## Image to 3D jewelry study
 
 <p align="center">
+  Click the 3D preview to inspect the jewelry geometry: diamond clusters,
+  silver body shape, and selectable construction details.
+</p>
+
+<p align="center">
   <a href="https://abdullahanxie.github.io/abdullahanxie/">
     <img src="./docs/jewelry-ring-orbit.gif" alt="Rotating 3D preview of the silver diamond ring GLB" width="100%">
   </a>
 </p>
 
 <p align="center">
-  <img src="./docs/source-input.webp" alt="Input image of a silver diamond cluster ring used for the 3D GLB study" width="42%">
-</p>
-
-<p align="center">
-  This starts from a jewelry reference image and opens as an interactive GLB:
-  diamond stones, a silver body, and selectable construction details.
-</p>
-
-<p align="center">
-  <sub>Click the 3D preview to inspect the silver and diamond material pass.</sub>
+  <sub>The input image sits inside the viewer as a corner reference.</sub>
 </p>
 
 ## A little more about the work

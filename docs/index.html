@@ -32,12 +32,8 @@
         <h1>GEM<br><span>RING.</span></h1>
         <p class="lede">
           A source image becomes an inspectable GLB with diamond stones,
-          a silver body, and readable construction details.
+          a silver body, and geometry you can inspect part by part.
         </p>
-        <figure class="source-card">
-          <img src="./source-input.webp" alt="Input reference image for the silver diamond ring">
-          <figcaption>SOURCE IMAGE</figcaption>
-        </figure>
       </div>
 
       <div class="viewport" id="viewport" aria-label="Interactive 3D model of the silver diamond ring">
@@ -56,19 +52,23 @@
           <button id="showButton" type="button">SHOW ALL</button>
           <button id="resetButton" type="button">RESET VIEW</button>
         </div>
+        <figure class="source-card viewer-source">
+          <img src="./source-input.webp" alt="Input reference image for the silver diamond ring">
+          <figcaption>INPUT IMAGE</figcaption>
+        </figure>
       </div>
 
       <aside class="parts-panel">
         <div class="panel-heading">
           <div>
-            <p class="eyebrow">MATERIAL ANATOMY</p>
+            <p class="eyebrow">GEOMETRY INSPECTOR</p>
             <h2 id="selectionName">Pick a part</h2>
           </div>
           <span class="part-count" id="partCount">00</span>
         </div>
         <p class="part-story" id="selectionStory">
-          Diamond meshes render as clear stones. The remaining construction
-          renders as silver metal.
+          Select the ring, stones, beads, prongs, or cluster parts to inspect
+          how the jewelry geometry is built.
         </p>
         <div class="parts-list" id="partsList"></div>
       </aside>

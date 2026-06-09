@@ -41,11 +41,11 @@ const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.dampingFactor = 0.055;
 controls.autoRotate = true;
-controls.autoRotateSpeed = 0.85;
+controls.autoRotateSpeed = 1.75;
 controls.minDistance = 2;
 controls.maxDistance = 18;
 
-scene.add(new THREE.HemisphereLight(0xb9dcff, 0x10150e, 2.2));
+scene.add(new THREE.HemisphereLight(0xffffff, 0x10150e, 3.1));
 
 const key = new THREE.DirectionalLight(0xeaffc1, 4.2);
 key.position.set(4, 7, 7);
@@ -53,12 +53,12 @@ key.castShadow = true;
 key.shadow.mapSize.set(1024, 1024);
 scene.add(key);
 
-const cyan = new THREE.DirectionalLight(0x36bfff, 2.8);
-cyan.position.set(-5, 1, 5);
+const cyan = new THREE.DirectionalLight(0x9be7ff, 4.4);
+cyan.position.set(-5, 4, 5);
 scene.add(cyan);
 
-const coral = new THREE.PointLight(0xff6048, 10, 12);
-coral.position.set(3, -2, 4);
+const coral = new THREE.PointLight(0xffffff, 8, 12);
+coral.position.set(2, 3, 4);
 scene.add(coral);
 
 const grid = new THREE.GridHelper(24, 24, 0x267a71, 0x18342e);
@@ -77,9 +77,9 @@ let pointerStart = null;
 
 const silverMaterial = new THREE.MeshPhysicalMaterial({
   name: "Viewer_Silver",
-  color: 0xd9dde0,
+  color: 0xbfc7c9,
   metalness: 1,
-  roughness: 0.19,
+  roughness: 0.24,
   clearcoat: 0.45,
   clearcoatRoughness: 0.14,
   envMapIntensity: 1.9,
@@ -87,19 +87,21 @@ const silverMaterial = new THREE.MeshPhysicalMaterial({
 
 const diamondMaterial = new THREE.MeshPhysicalMaterial({
   name: "Viewer_Diamond",
-  color: 0xffffff,
+  color: 0xe8fbff,
   metalness: 0,
-  roughness: 0.015,
-  transmission: 0.78,
-  thickness: 0.18,
+  roughness: 0.02,
+  transmission: 0.42,
+  thickness: 0.09,
   ior: 2.42,
   transparent: true,
-  opacity: 0.72,
+  opacity: 0.96,
   depthWrite: false,
+  emissive: 0x9eeeff,
+  emissiveIntensity: 0.16,
   specularIntensity: 1,
   clearcoat: 1,
   clearcoatRoughness: 0.02,
-  envMapIntensity: 2.8,
+  envMapIntensity: 3.8,
   side: THREE.DoubleSide,
 });
 
@@ -112,13 +114,13 @@ function materialFor(mesh) {
 }
 
 const stories = [
-  ["band_mesh", "The main ring body uses a polished silver material so the generated form reads as jewelry metal."],
-  ["band_gem", "Small band stones are treated as diamond: clear, bright, and sharper than the silver beneath them."],
-  ["band_bead", "The bead rows use the diamond material to keep the pave detail bright instead of turning into metal."],
-  ["centergem", "The center stone uses the strongest diamond pass, with high clarity and crisp reflective edges."],
-  ["petal", "Cluster petals are rendered as diamond stones around the crown of the ring."],
-  ["clusterprongs", "The crown support and prongs stay silver so the diamonds remain visually separate."],
-  ["prong", "Prongs hold the stones in silver and keep the construction readable."],
+  ["band_mesh", "The main ring body defines the silver band shape and the opening through the ring."],
+  ["band_gem", "Small band stones repeat across the shank and show the pave geometry from the source image."],
+  ["band_bead", "The bead rows build the dense surface detail around the smaller stones."],
+  ["centergem", "The center gem anchors the cluster geometry at the crown of the ring."],
+  ["petal", "Cluster petals form the raised diamond crown around the center stones."],
+  ["clusterprongs", "The crown support and prongs hold the upper stone cluster in place."],
+  ["prong", "Prongs show how the stones are held by the silver structure."],
 ];
 
 function readable(name) {
@@ -128,7 +130,7 @@ function readable(name) {
 function storyFor(name) {
   const normalized = name.toLowerCase();
   const match = stories.find(([keyName]) => normalized.includes(keyName.toLowerCase()));
-  return match ? match[1] : "This part uses the silver material unless its name marks it as a gem, bead, petal, stone, or diamond.";
+  return match ? match[1] : "This selectable mesh is one piece of the ring geometry.";
 }
 
 function eachMaterial(material, callback) {
@@ -167,7 +169,7 @@ function selectPart(mesh) {
     selectionStory.textContent = storyFor(selected.name);
   } else {
     selectionName.textContent = "Pick a part";
-    selectionStory.textContent = "Diamond meshes render as clear stones. The remaining construction renders as silver metal.";
+    selectionStory.textContent = "Select the ring, stones, beads, prongs, or cluster parts to inspect how the jewelry geometry is built.";
   }
 
   document.querySelectorAll(".part-button").forEach((button) => {
@@ -196,13 +198,15 @@ function frameModel() {
   const horizontalFov = 2 * Math.atan(Math.tan(fov / 2) * camera.aspect);
   const verticalDistance = sphere.radius / Math.sin(fov / 2);
   const horizontalDistance = sphere.radius / Math.sin(horizontalFov / 2);
-  const distance = Math.max(verticalDistance, horizontalDistance) * 1.12;
-  const direction = new THREE.Vector3(0.18, 0.08, 1).normalize();
+  const distance = Math.max(verticalDistance, horizontalDistance) * 0.98;
+  const target = sphere.center.clone();
+  target.y += sphere.radius * 0.16;
+  const direction = new THREE.Vector3(0.34, 0.46, 1).normalize();
   camera.position.copy(sphere.center).addScaledVector(direction, distance);
   camera.near = Math.max(0.01, distance / 1000);
   camera.far = distance * 30;
   camera.updateProjectionMatrix();
-  controls.target.copy(sphere.center);
+  controls.target.copy(target);
   controls.minDistance = sphere.radius * 1.2;
   controls.maxDistance = sphere.radius * 8;
   controls.update();
