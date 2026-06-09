@@ -52,7 +52,7 @@ a {
   background: var(--ink);
   padding: 0 14px;
   font: 700 10px/1 "Courier New", monospace;
-  letter-spacing: 0.15em;
+  letter-spacing: 0;
 }
 
 .identity {
@@ -103,14 +103,14 @@ a {
   margin: 0 0 15px;
   color: var(--muted);
   font: 700 9px/1.5 "Courier New", monospace;
-  letter-spacing: 0.16em;
+  letter-spacing: 0;
 }
 
 h1 {
   margin: 0;
-  font-size: clamp(48px, 6vw, 100px);
-  line-height: 0.81;
-  letter-spacing: -0.09em;
+  font-size: 58px;
+  line-height: 0.88;
+  letter-spacing: 0;
 }
 
 h1 span {
@@ -123,6 +123,31 @@ h1 span {
   color: #aeb7af;
   font-size: 13px;
   line-height: 1.65;
+}
+
+.source-card {
+  width: min(220px, 100%);
+  margin: 24px 0 0;
+  border: 1px solid var(--line);
+  background: #f4f4f1;
+}
+
+.source-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #f4f4f1;
+}
+
+.source-card figcaption {
+  margin: 0;
+  padding: 8px 10px;
+  border-top: 1px solid var(--line);
+  background: var(--ink);
+  color: var(--muted);
+  font: 700 8px/1 "Courier New", monospace;
+  letter-spacing: 0;
 }
 
 .viewport {
@@ -162,7 +187,7 @@ h1 span {
   background: var(--panel);
   color: var(--muted);
   font: 700 8px/1 "Courier New", monospace;
-  letter-spacing: 0.12em;
+  letter-spacing: 0;
   cursor: pointer;
   pointer-events: auto;
 }
@@ -171,18 +196,6 @@ h1 span {
 .toolbar button.active {
   border-color: var(--lime);
   color: var(--lime);
-}
-
-.gesture {
-  position: absolute;
-  z-index: 2;
-  right: 15px;
-  bottom: 10px;
-  margin: 0;
-  color: var(--muted);
-  font: 700 8px/1 "Courier New", monospace;
-  letter-spacing: 0.12em;
-  pointer-events: none;
 }
 
 .loading {
@@ -206,7 +219,7 @@ h1 span {
   justify-content: space-between;
   color: var(--paper);
   font: 700 9px/1 "Courier New", monospace;
-  letter-spacing: 0.14em;
+  letter-spacing: 0;
 }
 
 .loading-copy strong {
@@ -252,7 +265,7 @@ h2 {
   margin: 0;
   font-size: 19px;
   line-height: 1.05;
-  letter-spacing: -0.04em;
+  letter-spacing: 0;
 }
 
 .part-count {
@@ -306,7 +319,7 @@ h2 {
 .part-meta {
   color: var(--muted);
   font: 700 8px/1 "Courier New", monospace;
-  letter-spacing: 0.08em;
+  letter-spacing: 0;
 }
 
 .part-button.active .part-index,
@@ -333,6 +346,10 @@ h2 {
 
   .lede {
     font-size: 11px;
+  }
+
+  h1 {
+    font-size: 50px;
   }
 }
 
@@ -368,12 +385,17 @@ h2 {
   }
 
   h1 {
-    font-size: 58px;
+    font-size: 46px;
   }
 
   .lede {
     max-width: 520px;
     margin-top: 18px;
+  }
+
+  .source-card {
+    width: min(180px, 100%);
+    margin-top: 16px;
   }
 
   .parts-panel {
@@ -389,8 +411,4 @@ h2 {
     min-height: 0;
   }
 
-  .gesture {
-    left: 14px;
-    right: auto;
-  }
 }

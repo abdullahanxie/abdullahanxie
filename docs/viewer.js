@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 
 const viewport = document.querySelector("#viewport");
 const partsList = document.querySelector("#partsList");
@@ -22,7 +23,7 @@ const scene = new THREE.Scene();
 scene.fog = new THREE.FogExp2(0x070a09, 0.022);
 
 const camera = new THREE.PerspectiveCamera(31, 1, 0.01, 100);
-const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true });
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.7));
 renderer.setClearColor(0x070a09, 1);
 renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -31,6 +32,10 @@ renderer.toneMappingExposure = 1.12;
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 viewport.prepend(renderer.domElement);
+
+const pmremGenerator = new THREE.PMREMGenerator(renderer);
+scene.environment = pmremGenerator.fromScene(new RoomEnvironment(), 0.04).texture;
+pmremGenerator.dispose();
 
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
@@ -70,19 +75,50 @@ let selectionMaterials = [];
 let wireframe = false;
 let pointerStart = null;
 
+const silverMaterial = new THREE.MeshPhysicalMaterial({
+  name: "Viewer_Silver",
+  color: 0xd9dde0,
+  metalness: 1,
+  roughness: 0.19,
+  clearcoat: 0.45,
+  clearcoatRoughness: 0.14,
+  envMapIntensity: 1.9,
+});
+
+const diamondMaterial = new THREE.MeshPhysicalMaterial({
+  name: "Viewer_Diamond",
+  color: 0xffffff,
+  metalness: 0,
+  roughness: 0.015,
+  transmission: 0.78,
+  thickness: 0.18,
+  ior: 2.42,
+  transparent: true,
+  opacity: 0.72,
+  depthWrite: false,
+  specularIntensity: 1,
+  clearcoat: 1,
+  clearcoatRoughness: 0.02,
+  envMapIntensity: 2.8,
+  side: THREE.DoubleSide,
+});
+
+function isDiamondPart(name) {
+  return /(gem|bead|diamond|stone|petal)/i.test(name);
+}
+
+function materialFor(mesh) {
+  return isDiamondPart(mesh.name) ? diamondMaterial : silverMaterial;
+}
+
 const stories = [
-  ["Ring Shank", "The jewelry foundation. It turns a visual idea into something designed to be held, worn, and made."],
-  ["Aperture Blade", "Seven overlapping blades carry the filmmaking origin of the object: light is shaped before an image exists."],
-  ["Camera Housing", "The camera body keeps the iris readable and gives the crown its mechanical structure."],
-  ["Vision Lens", "The lens stands for machine vision: teaching software to look closely, then learning from where it fails."],
-  ["Faceted Machine Vision Lens", "A gemstone and an optical sensor at once. It is the point where jewelry, 3D form, and computer vision meet."],
-  ["Film", "Small viewfinder marks keep filmmaking present without turning the object into a literal camera."],
-  ["Shoulder Rail", "The shoulders carry the crown into the ring. Their geometry is the quiet engineering that makes the idea believable."],
-  ["Signal Brace", "A visible path between the ring and its optical crown, like a trace carrying an image into a system."],
-  ["Setting Pin", "A precise joint between the jewelry setting and its optical assembly."],
-  ["Engineering Fastener", "Tiny, named assembly details make the object understandable when it is picked apart."],
-  ["Lens Prong", "The lens is held like a stone, but the setting is built with the logic of a machine."],
-  ["Vision Pupil", "The final point of focus: where looking becomes interpretation."],
+  ["band_mesh", "The main ring body uses a polished silver material so the generated form reads as jewelry metal."],
+  ["band_gem", "Small band stones are treated as diamond: clear, bright, and sharper than the silver beneath them."],
+  ["band_bead", "The bead rows use the diamond material to keep the pave detail bright instead of turning into metal."],
+  ["centergem", "The center stone uses the strongest diamond pass, with high clarity and crisp reflective edges."],
+  ["petal", "Cluster petals are rendered as diamond stones around the crown of the ring."],
+  ["clusterprongs", "The crown support and prongs stay silver so the diamonds remain visually separate."],
+  ["prong", "Prongs hold the stones in silver and keep the construction readable."],
 ];
 
 function readable(name) {
@@ -90,8 +126,9 @@ function readable(name) {
 }
 
 function storyFor(name) {
-  const match = stories.find(([keyName]) => name.includes(keyName.replaceAll(" ", "_")));
-  return match ? match[1] : "One part of a single object built from filmmaking, jewelry, machine vision, and engineering.";
+  const normalized = name.toLowerCase();
+  const match = stories.find(([keyName]) => normalized.includes(keyName.toLowerCase()));
+  return match ? match[1] : "This part uses the silver material unless its name marks it as a gem, bead, petal, stone, or diamond.";
 }
 
 function eachMaterial(material, callback) {
@@ -130,7 +167,7 @@ function selectPart(mesh) {
     selectionStory.textContent = storyFor(selected.name);
   } else {
     selectionName.textContent = "Pick a part";
-    selectionStory.textContent = "Every visible piece has a job. Select one in the model or from the list to see how the object connects film, vision, jewelry, and engineering.";
+    selectionStory.textContent = "Diamond meshes render as clear stones. The remaining construction renders as silver metal.";
   }
 
   document.querySelectorAll(".part-button").forEach((button) => {
@@ -139,7 +176,6 @@ function selectPart(mesh) {
 }
 
 function addPartButton(mesh, index) {
-  const vertices = mesh.geometry.attributes.position?.count || 0;
   const button = document.createElement("button");
   button.type = "button";
   button.className = "part-button";
@@ -147,7 +183,7 @@ function addPartButton(mesh, index) {
   button.innerHTML = `
     <span class="part-index">${String(index + 1).padStart(2, "0")}</span>
     <span class="part-name">${readable(mesh.name)}</span>
-    <span class="part-meta">${vertices}V</span>
+    <span class="part-meta">${mesh.userData.materialLabel}</span>
   `;
   button.addEventListener("click", () => selectPart(mesh));
   partsList.append(button);
@@ -171,6 +207,7 @@ function frameModel() {
   controls.maxDistance = sphere.radius * 8;
   controls.update();
   controls.saveState();
+  grid.scale.setScalar(Math.max(sphere.radius * 10 / 24, 0.001));
   grid.position.y = box.min.y - sphere.radius * 0.035;
 }
 
@@ -182,7 +219,7 @@ function showAll() {
 }
 
 new GLTFLoader().load(
-  "./aperture-ring.glb",
+  "./jewelry-ring.glb",
   (gltf) => {
     model = gltf.scene;
     const box = new THREE.Box3().setFromObject(model);
@@ -194,7 +231,9 @@ new GLTFLoader().load(
       if (!child.isMesh || !child.geometry) return;
       child.castShadow = true;
       child.receiveShadow = true;
+      child.material = materialFor(child);
       child.userData.sourceMaterial = child.material;
+      child.userData.materialLabel = isDiamondPart(child.name) ? "DIA" : "SILVER";
       meshes.push(child);
     });
 

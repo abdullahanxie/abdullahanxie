@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#090d0c">
-  <title>The Aperture Ring - Abdullah Hussain</title>
+  <title>Silver Diamond Ring - Abdullah Hussain</title>
+  <link rel="icon" href="data:,">
   <link rel="stylesheet" href="./viewer.css">
   <script type="importmap">
     {
@@ -20,25 +21,29 @@
     <header class="topbar">
       <a class="identity" href="https://github.com/abdullahanxie">
         <span class="signal"></span>
-        <span>ABDULLAH HUSSAIN / OBJECT STUDY 01</span>
+        <span>ABDULLAH HUSSAIN / JEWELRY STUDY 01</span>
       </a>
       <div class="stats" id="stats">LOADING GEOMETRY</div>
     </header>
 
     <section class="stage">
       <div class="intro">
-        <p class="eyebrow">A SMALL OBJECT WITH SEVERAL HISTORIES</p>
-        <h1>THE<br><span>APERTURE</span><br>RING.</h1>
+        <p class="eyebrow">IMAGE TO 3D JEWELRY STUDY</p>
+        <h1>GEM<br><span>RING.</span></h1>
         <p class="lede">
-          Filmmaking taught my eye. Engineering gave that eye a way to build.
-          This ring holds both ideas in one object.
+          A source image becomes an inspectable GLB with diamond stones,
+          a silver body, and readable construction details.
         </p>
+        <figure class="source-card">
+          <img src="./source-input.webp" alt="Input reference image for the silver diamond ring">
+          <figcaption>SOURCE IMAGE</figcaption>
+        </figure>
       </div>
 
-      <div class="viewport" id="viewport" aria-label="Interactive 3D model of the Aperture Ring">
+      <div class="viewport" id="viewport" aria-label="Interactive 3D model of the silver diamond ring">
         <div class="loading" id="loading">
           <div class="loading-copy">
-            <span>ASSEMBLING OBJECT</span>
+            <span>LOADING GLB</span>
             <strong id="loadingValue">0%</strong>
           </div>
           <div class="loading-track"><i id="loadingBar"></i></div>
@@ -51,21 +56,19 @@
           <button id="showButton" type="button">SHOW ALL</button>
           <button id="resetButton" type="button">RESET VIEW</button>
         </div>
-
-        <p class="gesture">DRAG TO ORBIT / SCROLL TO ZOOM / CLICK A PART</p>
       </div>
 
       <aside class="parts-panel">
         <div class="panel-heading">
           <div>
-            <p class="eyebrow">OBJECT ANATOMY</p>
+            <p class="eyebrow">MATERIAL ANATOMY</p>
             <h2 id="selectionName">Pick a part</h2>
           </div>
           <span class="part-count" id="partCount">00</span>
         </div>
         <p class="part-story" id="selectionStory">
-          Every visible piece has a job. Select one in the model or from the list
-          to see how the object connects film, vision, jewelry, and engineering.
+          Diamond meshes render as clear stones. The remaining construction
+          renders as silver metal.
         </p>
         <div class="parts-list" id="partsList"></div>
       </aside>
