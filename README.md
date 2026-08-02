@@ -1,9 +1,3 @@
-<p align="center">
-  <a href="#how-it-connects">
-    <img src="./assets/imagination-engineered.svg" alt="Imagination, Engineered — Abdullah Hussain" width="100%">
-  </a>
-</p>
-
 ## Hi, I'm Abdullah.
 
 I started with filmmaking. Editing and color grading taught me to notice rhythm,
