@@ -76,12 +76,12 @@ let wireframe = false;
 let pointerStart = null;
 
 const silverMaterial = new THREE.MeshPhysicalMaterial({
-  name: "Viewer_Silver",
-  color: 0xbfc7c9,
+  name: "Viewer_Gold",
+  color: 0xeebd62,
   metalness: 1,
-  roughness: 0.24,
+  roughness: 0.17,
   clearcoat: 0.45,
-  clearcoatRoughness: 0.14,
+  clearcoatRoughness: 0.12,
   envMapIntensity: 1.9,
 });
 
@@ -106,7 +106,7 @@ const diamondMaterial = new THREE.MeshPhysicalMaterial({
 });
 
 function isDiamondPart(name) {
-  return /(gem|bead|diamond|stone|petal)/i.test(name);
+  return /(gem|diamond|stone|petal)/i.test(name);  // beads are gold milgrain on this ring
 }
 
 function materialFor(mesh) {
