@@ -1,85 +1,123 @@
-## Hi, I'm Abdullah.
+<div align="center">
 
-I started with filmmaking. Editing and color grading taught me to notice rhythm,
-light, composition, and all the small choices that make an image feel right.
-Later I moved deeper into engineering and AI, but I never left that way of
-looking at things behind.
+<img src="assets/hero.svg" width="100%" alt="Abdullah Hussain: I build worlds out of code. Robots, simulation, generative 3D and computational jewelry." />
 
-These days I write code, train vision models, work with 3D, and build tools for
-creative people. I like projects where the technical problem and the visual
-problem are really the same problem.
+<a href="https://nova3d.xyz"><img src="https://api.iconify.design/lucide:globe-2.svg?color=%230e1013" width="16" height="16" align="center" alt="" /> nova3d.xyz</a> · <a href="https://formanova.ai"><img src="https://api.iconify.design/lucide:gem.svg?color=%230e1013" width="16" height="16" align="center" alt="" /> formanova.ai</a> · <a href="https://www.linkedin.com/in/abdullah-hanxie-338519252/"><img src="https://api.iconify.design/simple-icons:linkedin.svg?color=%230a66c2" width="16" height="16" align="center" alt="" /> linkedin</a> · <a href="https://www.instagram.com/abdullahanxie/"><img src="https://api.iconify.design/simple-icons:instagram.svg?color=%23e4405f" width="16" height="16" align="center" alt="" /> instagram</a> · <a href="https://github.com/abdullahanxie?tab=repositories"><img src="https://api.iconify.design/octicon:repo-16.svg?color=%230e1013" width="16" height="16" align="center" alt="" /> repositories</a>
 
-## Image to 3D jewelry study
+</div>
 
-<p align="center">
-  Click the 3D preview to inspect the jewelry geometry: diamond clusters,
-  silver body shape, and selectable construction details.
-</p>
+<br/>
+
+I started with filmmaking. Editing and color grading taught me to notice rhythm, light, composition, and all the small choices that make an image feel right. Later I moved deeper into engineering and AI, but I never left that way of looking at things behind.
+
+These days I build systems that write 3D worlds as code: environments robots can actually work in, jewelry with real manufacturing geometry, and the tools that make both feel effortless. I like projects where the technical problem and the visual problem are really the same problem.
+
+<br/>
+
+<samp>building</samp>
+
+## What I'm building.
+
+| <a href="https://nova3d.xyz"><b>Nova3D</b></a> | <a href="https://formanova.ai"><b>FormaNova</b></a> |
+|---|---|
+| Worlds for robots, written as code. One prompt becomes a simulation-ready environment with working mechanisms, labeled masses and real contact physics, exported natively to MuJoCo, Isaac Sim, Gazebo and PyBullet. | Computational jewelry CAD on the same engine. Rings are authored as NURBS construction programs in millimetres: prong counts, stone sizes and band profiles you can measure back from the result. |
+
+<br/>
+
+<samp>jewelry</samp>
+
+## Computational jewelry.
 
 <p align="center">
   <a href="https://abdullahanxie.github.io/abdullahanxie/">
-    <img src="./docs/jewelry-ring-orbit.gif" alt="Rotating 3D preview of the silver diamond ring GLB" width="100%">
+    <img src="./docs/jewelry-ring-orbit.gif" alt="Rotating 3D preview of a generated engagement ring" width="88%">
   </a>
 </p>
 
-<p align="center">
-  <sub>The input image sits inside the viewer as a corner reference.</sub>
-</p>
+<p align="center"><sub>A platinum engagement ring authored as a NURBS CAD program: twin pavé bands, claw-prong setting, accent clusters, every stone its own named part. Click to inspect the geometry in 3D.</sub></p>
 
-## A little more about the work
+<br/>
+
+<samp>robots</samp>
+
+## Robots at work in my worlds.
+
+Every scene below was generated from a text prompt by Nova3D and simulated in MuJoCo. Doors open on real hinges, floors carry measured friction, and every loose object has a labeled mass.
+
+<table align="center">
+  <tr>
+    <td align="center" width="33%"><img src="https://raw.githubusercontent.com/RareSense/Nova3D/main/docs/media/robotics/cafe_robots.gif" width="100%"/><br/><sub><b>Café</b> · G1 waiters and a Go2 on a learned walking policy</sub></td>
+    <td align="center" width="33%"><img src="https://raw.githubusercontent.com/RareSense/Nova3D/main/docs/media/robotics/mall_robots.gif" width="100%"/><br/><sub><b>Mall</b> · five robot types sharing one atrium</sub></td>
+    <td align="center" width="33%"><img src="https://raw.githubusercontent.com/RareSense/Nova3D/main/docs/media/robotics/field_robots.gif" width="100%"/><br/><sub><b>Farm</b> · Apollo picks tomatoes, ANYmal hauls the crate</sub></td>
+  </tr>
+  <tr>
+    <td align="center" width="33%"><img src="https://raw.githubusercontent.com/RareSense/Nova3D/main/docs/media/robotics/g1_apartment.gif" width="100%"/><br/><sub><b>Apartment</b> · a G1 tidies a generated home</sub></td>
+    <td align="center" width="33%"><img src="https://raw.githubusercontent.com/RareSense/Nova3D/main/docs/media/robotics/zerog_catch.gif" width="100%"/><br/><sub><b>Orbital lab</b> · a thrown sample caught in flight at zero g</sub></td>
+    <td align="center" width="33%"><img src="https://raw.githubusercontent.com/RareSense/Nova3D/main/docs/media/robotics/friction_go2_lanes.gif" width="100%"/><br/><sub><b>Traction hall</b> · one policy on ice, steel and rubber</sub></td>
+  </tr>
+</table>
+
+<br/>
+
+<samp>physics</samp>
+
+## Same scene, different physics.
+
+The scenes come with real-life physics built in. Run the same world twice and change only gravity:
+
+<table align="center">
+  <tr>
+    <td align="center" width="50%"><img src="https://raw.githubusercontent.com/RareSense/Nova3D/main/docs/media/robotics/zerog_pushoff.gif" width="100%"/><br/><sub><b>g = 0</b> · a humanoid pushes off the hatch and floats the length of the module</sub></td>
+    <td align="center" width="50%"><img src="https://raw.githubusercontent.com/RareSense/Nova3D/main/docs/media/robotics/gravity981_drop.gif" width="100%"/><br/><sub><b>g = 9.81 m/s²</b> · the identical throw falls in a curve and the catcher misses</sub></td>
+  </tr>
+</table>
+
+<br/>
+
+<samp>about</samp>
+
+## A little more about the work.
 
 <details>
 <summary><strong>AI and computer vision</strong></summary>
 
-I enjoy working close to the image itself. I have trained transformer-based
-vision models, worked on visual classification, built datasets, tracked
-experiments, and spent a lot of time understanding why a model gets something
-wrong. I also explore generative and multimodal AI, especially where it can give
-artists and designers more control instead of making their choices for them.
+I enjoy working close to the image itself. I have trained transformer-based vision models, worked on visual classification, built datasets, tracked experiments, and spent a lot of time understanding why a model gets something wrong. I also explore generative and multimodal AI, especially where it can give artists and designers more control instead of making their choices for them.
 
 </details>
 
 <details>
-<summary><strong>3D and design</strong></summary>
+<summary><strong>3D, simulation and design</strong></summary>
 
-I am interested in form, materials, light, and how an idea changes once it
-becomes spatial. My work moves between 3D design, rendering, engineering design,
-and the tools needed to make complex geometry understandable and useful.
+I am interested in form, materials, light, and how an idea changes once it becomes spatial. My work moves between 3D design, physics simulation, rendering, engineering design, and the tools needed to make complex geometry understandable and useful.
 
 </details>
 
 <details>
 <summary><strong>Film and visual work</strong></summary>
 
-Filmmaking is still a big part of how I think. I have more than three years of
-experience across video production, editing, color grading, animation, and
-graphic design. Even when I am building software, I am usually thinking about
-the sequence, the feeling, and what the person on the other side will see.
+Filmmaking is still a big part of how I think. I have more than three years of experience across video production, editing, color grading, animation, and graphic design. Even when I am building software, I am usually thinking about the sequence, the feeling, and what the person on the other side will see.
 
 </details>
 
 <details>
 <summary><strong>Software and experiments</strong></summary>
 
-Python is usually where I begin, but I also build web interfaces, prototypes,
-automation, and small tools whenever an idea needs a shape. I prefer making a
-working version early, learning from it, and improving the parts that actually
-matter.
+Python is usually where I begin, but I also build web interfaces, prototypes, automation, and small tools whenever an idea needs a shape. I prefer making a working version early, learning from it, and improving the parts that actually matter.
 
 </details>
 
-## Something people noticed
+<br/>
 
-In 2023 I used AI to reimagine Bollywood figures inside the visual world of
-*Barbie*. The images travelled much further than I expected and were featured by
-[The Times of India](https://timesofindia.indiatimes.com/life-style/spotlight/web-stories/ai-imagines-bollywood-celebs-in-the-barbie-world/photostory/101855715.cms),
-[IndiaTimes](https://www.indiatimes.com/ampstories/entertainment/virat-anushka-to-deepika-ranveer-ai-reimagines-popular-bollywood-celebrity-couples-in-barbie-world-609792.html),
-[MensXP](https://www.mensxp.com/ampstories/buzz-on-web/latest/139474-ai-imagines-bollywood-actors-in-the-barbie-film-latest-trending-alia-priyanka-margot-robbie.html),
-and [Onmanorama](https://www.onmanorama.com/entertainment/entertainment-news/2023/07/20/barbie-movie-bollywood-actors-ai-reimagination-priyanka-chopra-nick-jonas.html).
-That project reminded me that technical experiments can still carry culture,
-humor, and a point of view.
+<samp>press</samp>
 
-You can find me on
-[LinkedIn](https://www.linkedin.com/in/abdullah-hanxie-338519252/),
-[Instagram](https://www.instagram.com/abdullahanxie/), or around my
-[GitHub repositories](https://github.com/abdullahanxie?tab=repositories).
+## Something people noticed.
+
+In 2023 I used AI to reimagine Bollywood figures inside the visual world of *Barbie*. The images travelled much further than I expected and were featured by [The Times of India](https://timesofindia.indiatimes.com/life-style/spotlight/web-stories/ai-imagines-bollywood-celebs-in-the-barbie-world/photostory/101855715.cms), [IndiaTimes](https://www.indiatimes.com/ampstories/entertainment/virat-anushka-to-deepika-ranveer-ai-reimagines-popular-bollywood-celebrity-couples-in-barbie-world-609792.html), [MensXP](https://www.mensxp.com/ampstories/buzz-on-web/latest/139474-ai-imagines-bollywood-actors-in-the-barbie-film-latest-trending-alia-priyanka-margot-robbie.html) and [Onmanorama](https://www.onmanorama.com/entertainment/entertainment-news/2023/07/20/barbie-movie-bollywood-actors-ai-reimagination-priyanka-chopra-nick-jonas.html). That project reminded me that technical experiments can still carry culture, humor, and a point of view.
+
+<br/>
+
+<div align="center">
+
+<a href="https://www.linkedin.com/in/abdullah-hanxie-338519252/"><img src="assets/footer.svg" width="100%" alt="Let's build something. nova3d.xyz · formanova.ai · linkedin · instagram"/></a>
+
+</div>
